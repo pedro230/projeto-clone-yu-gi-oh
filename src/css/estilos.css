@@ -3,11 +3,11 @@ body {
 	background-image: url(../imagens/fundo-site.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 100vh;
-    gap: 30px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 100vh;
+	gap: 30px;
 }
 
 .cabecalho {
@@ -24,20 +24,21 @@ body {
 	display: flex;
 	flex-direction: column;
 	padding: 12px;
-    gap: 5px;
-    position: absolute;
+	gap: 5px;
+	position: absolute;
 }
 
 .cartao.selecionado {
 	opacity: 1;
-    z-index: 1;
+	z-index: 1;
 }
 
 .lista-personagens {
 	width: 300px;
 	height: 500px;
 	border-radius: 10px;
-    position: relative;
+	position: relative;
+	padding: 12px;
 }
 
 .slider {
@@ -85,7 +86,7 @@ body {
 	border: 2px solid #a67c52;
 	text-align: left;
 	line-height: 1.5;
-    padding: 5px;
+	padding: 5px;
 	gap: 5px;
 }
 
@@ -111,60 +112,93 @@ body {
 .fundo-1 {
 	background: url(../imagens/fundo-1.jpg) no-repeat;
 }
+
 .fundo-2 {
 	background: url(../imagens/fundo-2.jpg) no-repeat;
 }
+
 .fundo-3 {
 	background: url(../imagens/fundo-3.jpg) no-repeat;
 }
+
 .fundo-4 {
 	background: url(../imagens/fundo-4.jpg) no-repeat;
 }
+
 .fundo-5 {
 	background: url(../imagens/fundo-5.jpg) no-repeat;
 }
+
 .fundo-6 {
 	background: url(../imagens/fundo-6.jpg) no-repeat;
 }
+
 .fundo-7 {
 	background: url(../imagens/fundo-7.jpg) no-repeat;
 }
 
-.btn-seta{
-    background-color: #E8E8E8;
-    width: 70px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50px;
-    border: 0;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+.btn-seta {
+	background-color: #E8E8E8;
+	width: 70px;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50px;
+	border: 0;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.btn-seta.btn-voltar{
-    transform: rotateY(180deg);
+.btn-seta.btn-voltar {
+	transform: rotateY(180deg);
 }
 
-.btn-seta:hover{
-    background-color: #8351fe;
+.btn-seta:hover {
+	background-color: #8351fe;
 }
 
-body::-webkit-scrollbar-track{
-    background-color: #c08057;
+body::-webkit-scrollbar-track {
+	background-color: #c08057;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+	width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #c08057;
-    border-radius: 10px;
+	background: #c08057;
+	border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #c08057;
+	background: #c08057;
+}
+
+.carta-virada {
+	display: none;
+}
+
+.carta-virada.mostrar-fundo-carta {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background:url(../imagens/fundo-carta.jpg);
+	background-size: cover;
+	background-position: center;
+	top: 0;
+	left: 0;
+	border-radius: 10px;
+	z-index: 2;
+}
+
+.cartao.virar {
+	transform: rotateZ(90deg);
+	transition: transform 0.3s ease-in-out;
+}
+
+.esconder {
+	display: none;
 }
